@@ -1347,9 +1347,9 @@ DokanCreateDiskDevice(__in PDRIVER_OBJECT DriverObject, __in ULONG MountId,
 
     if (!NT_SUCCESS(status)) {
       DokanLogError(&logger, status,
-                    (isNetworkFileSystem
-                         ? L"IoCreateDevice(FILE_DEVICE_UNKNOWN) failed."
-                         : L"IoCreateDeviceSecure(FILE_DEVICE_DISK) failed."));
+          (isNetworkFileSystem
+              ? L"IoCreateDevice(FILE_DEVICE_UNKNOWN) failed."
+              : L"IoCreateDeviceSecure(FILE_DEVICE_DISK) failed."));
       __leave;
     }
 
